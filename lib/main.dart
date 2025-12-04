@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'screens/login_screen.dart';
 import 'screens/dashboard_screen.dart';
 import 'screens/members_list_screen.dart';
+import 'screens/profile_screen.dart';
 
 void main() {
   runApp(const CommunityConnectApp());
@@ -62,6 +63,7 @@ class CommunityConnectApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/dashboard': (context) => const DashboardScreen(),
         '/members': (context) => const MembersListScreen(),
+        '/profile': (context) => const ProfileScreen(),
       },
     );
   }

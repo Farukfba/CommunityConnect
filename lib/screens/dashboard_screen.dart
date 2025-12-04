@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/announcement.dart';
 import '../data/mock_data.dart';
 import 'members_list_screen.dart';
+import 'profile_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -41,6 +42,17 @@ class _DashboardScreenState extends State<DashboardScreen>
         context,
         MaterialPageRoute(
           builder: (context) => const MembersListScreen(),
+        ),
+      ).then((_) {
+        setState(() {
+          _selectedIndex = 0;
+        });
+      });
+    } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const ProfileScreen(),
         ),
       ).then((_) {
         setState(() {
